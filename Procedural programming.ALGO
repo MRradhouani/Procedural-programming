@@ -1,0 +1,30 @@
+ALGORITHM dot_product
+VAR
+     v1,v2 : ARRAY_OF INTEGER[100];
+     n:INTEGER;
+     ps: INTEGER:=0;
+
+BEGIN
+    read(n);
+    Write( 'la langeur de la vectors est' n);
+   FOR i FROM 1 TO n.length-1  DO
+       read(v1[i]) ;
+       read(v2[i]) ;
+       dot_product(v1,v2,n)
+       IF (ps=0) THEN
+           Write('vectors scalar')
+       ELSE
+            Write('vectors non scalar')
+
+       END_IF
+   END_FOR
+END 
+PROCEDURE dot_product(VAR t1,t2: ARRAY_OF INTEGER[100];)
+    VAR
+        ps: INTEGER:=0;
+    BEGIN
+        FOR i FROM 1 TO t1.length-1 STEP 1  DO
+            ps:=ps+(t1[i]+t2[i])
+            Write('resultat of this procedur egal : ' ps)
+        END_FOR
+    END
